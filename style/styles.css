@@ -1,0 +1,297 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(10,10,10);
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+
+}
+
+@keyframes lockscrollintro {
+    from {
+        overflow-y: hidden;
+    }
+    99% {
+        overflow-y: hidden;
+    }
+    to {
+        overflow-y: scroll;
+    }
+}
+
+.language-dropdown {
+    position: absolute;
+    
+    right: 20px;
+    top: 20px;
+}
+
+.logo {
+    position: absolute;
+    z-index: 0;
+    align-self: center;
+    margin:auto;
+    width: 80%;
+    opacity: 0%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.language-dropdown form select {
+    background-color: rgb(10,10,10);
+    color: white;
+    border-color: white;
+    border-radius: .5rem;
+
+}
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.adminpanel {
+    opacity: 0;
+    cursor: normal;
+}
+.intro {
+
+    animation: lockscrollintro 3s;
+}
+.header-section {
+    width: 100%;
+    height: 80vh;
+
+}
+
+
+.container {
+    text-align: center;
+    width:100%;
+}
+
+.header-section div h1 {
+    margin-top: 30vh;
+    font-size: 1000%;
+}
+
+
+.header-section div h2, .portfolio-section div h2, .contact-section div h2, .reviews-section div h2, .more div h2{
+    font-size: 400%;
+}
+
+.portfolio-section div {
+    max-width: 100%;
+}
+
+
+.portfolio-section div .video-container .video-item {
+    text-align: center;
+}
+.shorts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size:120%;
+}
+.more {
+
+    display: flex;
+    justify-content: center;
+}
+.more-container {
+    margin-top: 30vh;
+    text-align: center;
+}
+
+#google-drive-icon {
+    width: 20%;
+}
+
+.more-container a:hover #google-drive-icon {
+    animation: googledrive 0.1s;
+    border: 5px solid white;
+    border-radius: 100%;
+    margin-top: -5px;
+}
+
+@keyframes googledrive {
+    from {
+        border:0px solid white;
+        border-radius: 100%;
+        margin-top: 0px;
+    }
+    to {
+        border: 5px solid white;
+        border-radius: 100%;
+        margin-top: -5px;
+    }
+} 
+
+
+.contact-section {
+    margin-top: 30vh;
+}
+.contact-section div h3, .contact-section div a {
+    font-size: 150%;
+}
+.contact-section div a {
+    color: white;
+    text-decoration: none;
+}
+.contact-section div a:hover {
+    animation: emailadress 0.2s;
+    text-decoration: underline;
+}
+
+@keyframes emailadress {
+    from {
+        text-decoration: none;
+    }
+    to {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+.footer-section {
+    height: 50vh;
+}
+.footer-section p {
+    margin-top: 40vh;
+}
+
+
+
+
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 1;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+.reviews-section {
+    height: 70vh;
+    margin-top: 30vh;
+}
+.reviews-section div .expandable-reviews {
+    display: flex;
+    flex-wrap: wrap;
+} 
+.reviews-section div div .review-item {
+    border: 2px solid #444444;
+    background-color: #444444;
+    border-radius: .8rem;
+    box-shadow: #444444 5px 5px 5px;
+    opacity: 10;
+    margin: 2rem;
+    width: 20vw;
+    height: 30vh;
+}
+
+
+
+@media (min-width: 1250px) {
+
+    .portfolio-section div .video-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5rem;
+    }
+    #alternate {
+        margin-top:5rem;
+    }
+
+}  
+@media (max-width: 1249px) {
+
+    .portfolio-section div .video-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 5rem;
+    }
+    .portfolio-section div .video-container div {
+        margin-bottom: 5rem;
+    }
+    .reviews-section div div .review-item{
+        height: fit-content;
+        width: 35vw;
+    }
+
+}  
+@media (max-width: 600px) {
+    .header-section div h1 {
+        margin-top: 30vh;
+        font-size: 400%;
+    }
+    .header-section div h2, .portfolio-section div h2, .contact-section div h2, .reviews-section div h2{
+        font-size: 170%;
+    }
+
+    .portfolio-section div .video-container div iframe {
+        width: 280px;
+        height: 200px;
+        margin-left: 0px;
+    }
+    #google-drive-icon {
+        width: 60vw;
+    }
+    .reviews-section div div .review-item {
+        min-width: 33vw;
+        max-width: 33vw;
+
+    }
+
+}  
+@media (max-width: 400px) {
+    .header-section div h1 {
+        margin-top: 30vh;
+        font-size: 500%;
+    }
+    .header-section div h2, .portfolio-section div h2, .contact-section div h2, .reviews-section div h2{
+        font-size: 170%;
+    }
+
+    .portfolio-section div .video-container div iframe {
+        width: 250px;
+        height: 164px;
+        margin-left: 0px;
+    }
+    .reviews-section div div .review-item {
+        min-width: 30vw;
+        max-width: 30vw;
+        font-size: small;
+        text-align: center;
+    }
+
+}  
+
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+}
