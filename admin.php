@@ -29,7 +29,7 @@ if (!isset($_SESSION['visited'])) {
 
 
 // Set the admin password (change this to your desired password)
-$adminPassword = "unvideomasmigente";
+$adminPassword = "your-password";
 
 // Check if the user is an admin
 $isAdmin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
